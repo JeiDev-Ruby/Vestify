@@ -85,8 +85,8 @@ El comando `rails db:seed` creará un usuario administrador por defecto con las 
 
 ## 🧑‍🎨 Autor
 
-**[Tu Nombre]** – Desarrollador principal  
-[Tu perfil de GitHub o sitio web]
+**Jose Serrano** – Desarrollador principal  
+[Sitio web](http://jeidevp.com/)
 
 ---
 
