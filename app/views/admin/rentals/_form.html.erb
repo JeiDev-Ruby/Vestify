@@ -1,0 +1,62 @@
+<%= form_with(model: admin_rental) do |form| %>
+  <% if admin_rental.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(admin_rental.errors.count, "error") %> prohibited this admin_rental from being saved:</h2>
+
+      <ul>
+        <% admin_rental.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :customer_id, style: "display: block" %>
+    <%= form.text_field :customer_id %>
+  </div>
+
+  <div>
+    <%= form.label :dress_variant_id, style: "display: block" %>
+    <%= form.text_field :dress_variant_id %>
+  </div>
+
+  <div>
+    <%= form.label :start_date, style: "display: block" %>
+    <%= form.date_field :start_date %>
+  </div>
+
+  <div>
+    <%= form.label :end_date, style: "display: block" %>
+    <%= form.date_field :end_date %>
+  </div>
+
+  <div>
+    <%= form.label :return_date, style: "display: block" %>
+    <%= form.date_field :return_date %>
+  </div>
+
+  <div>
+    <%= form.label :deposit_amount, style: "display: block" %>
+    <%= form.text_field :deposit_amount %>
+  </div>
+
+  <div>
+    <%= form.label :deposit_returned, style: "display: block" %>
+    <%= form.checkbox :deposit_returned %>
+  </div>
+
+  <div>
+    <%= form.label :total_cost, style: "display: block" %>
+    <%= form.text_field :total_cost %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @admin_dress_variant %>
+
+<div>
+  <%= link_to "Edit this dress variant", edit_admin_dress_variant_path(@admin_dress_variant) %> |
+  <%= link_to "Back to dress variants", admin_dress_variants_path %>
+
+  <%= button_to "Destroy this dress variant", @admin_dress_variant, method: :delete %>
+</div>

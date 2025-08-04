@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dress: one
+  sku: MyString
+  size: one
+  color: MyString
+  condition: MyString
+  status: MyString
+  daily_rate: 9.99
+
+two:
+  dress: two
+  sku: MyString
+  size: two
+  color: MyString
+  condition: MyString
+  status: MyString
+  daily_rate: 9.99

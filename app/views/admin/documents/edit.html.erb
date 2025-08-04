@@ -1,0 +1,12 @@
+<% content_for :title, "Editing document" %>
+
+<h1>Editing document</h1>
+
+<%= render "form", admin_document: @admin_document %>
+
+<br>
+
+<div>
+  <%= link_to "Show this document", @admin_document %> |
+  <%= link_to "Back to documents", admin_documents_path %>
+</div>

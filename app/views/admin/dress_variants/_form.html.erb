@@ -1,0 +1,52 @@
+<%= form_with(model: admin_dress_variant) do |form| %>
+  <% if admin_dress_variant.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(admin_dress_variant.errors.count, "error") %> prohibited this admin_dress_variant from being saved:</h2>
+
+      <ul>
+        <% admin_dress_variant.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :dress_id, style: "display: block" %>
+    <%= form.text_field :dress_id %>
+  </div>
+
+  <div>
+    <%= form.label :sku, style: "display: block" %>
+    <%= form.text_field :sku %>
+  </div>
+
+  <div>
+    <%= form.label :size_id, style: "display: block" %>
+    <%= form.text_field :size_id %>
+  </div>
+
+  <div>
+    <%= form.label :color, style: "display: block" %>
+    <%= form.text_field :color %>
+  </div>
+
+  <div>
+    <%= form.label :condition, style: "display: block" %>
+    <%= form.text_field :condition %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div>
+    <%= form.label :daily_rate, style: "display: block" %>
+    <%= form.text_field :daily_rate %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

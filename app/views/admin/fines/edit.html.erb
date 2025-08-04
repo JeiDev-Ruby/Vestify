@@ -1,0 +1,12 @@
+<% content_for :title, "Editing fine" %>
+
+<h1>Editing fine</h1>
+
+<%= render "form", admin_fine: @admin_fine %>
+
+<br>
+
+<div>
+  <%= link_to "Show this fine", @admin_fine %> |
+  <%= link_to "Back to fines", admin_fines_path %>
+</div>

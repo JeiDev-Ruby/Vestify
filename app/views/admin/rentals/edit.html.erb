@@ -1,0 +1,12 @@
+<% content_for :title, "Editing rental" %>
+
+<h1>Editing rental</h1>
+
+<%= render "form", admin_rental: @admin_rental %>
+
+<br>
+
+<div>
+  <%= link_to "Show this rental", @admin_rental %> |
+  <%= link_to "Back to rentals", admin_rentals_path %>
+</div>

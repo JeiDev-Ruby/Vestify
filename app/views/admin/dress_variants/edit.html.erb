@@ -1,0 +1,12 @@
+<% content_for :title, "Editing dress variant" %>
+
+<h1>Editing dress variant</h1>
+
+<%= render "form", admin_dress_variant: @admin_dress_variant %>
+
+<br>
+
+<div>
+  <%= link_to "Show this dress variant", @admin_dress_variant %> |
+  <%= link_to "Back to dress variants", admin_dress_variants_path %>
+</div>

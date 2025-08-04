@@ -1,0 +1,12 @@
+<% content_for :title, "Editing size" %>
+
+<h1>Editing size</h1>
+
+<%= render "form", admin_size: @admin_size %>
+
+<br>
+
+<div>
+  <%= link_to "Show this size", @admin_size %> |
+  <%= link_to "Back to sizes", admin_sizes_path %>
+</div>
