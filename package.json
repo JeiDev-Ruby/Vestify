@@ -1,0 +1,10 @@
+{
+  "name": "app",
+  "private": "true",
+  "scripts": {
+   "build:css": "sass --watch ./app/assets/stylesheets/application.scss ./app/assets/builds/application.css"
+  },
+  "dependencies": {
+    "sass": "^1.89.2"
+  }
+}

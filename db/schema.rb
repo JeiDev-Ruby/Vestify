@@ -10,21 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_08_04_214040) do
+ActiveRecord::Schema[8.0].define(version: 2025_08_05_030521) do
   create_schema "admin"
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
-  create_table "admin_transactions", force: :cascade do |t|
-    t.bigint "rental_id", null: false
-    t.decimal "amount"
-    t.string "transaction_type"
-    t.string "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["rental_id"], name: "index_admin_transactions_on_rental_id"
-  end
+  # Custom types defined in this database.
+  # Note that some types may not work with other database engines. Be careful if changing database.
+  create_enum "type_user_enum", ["blog", "snippet", "vlog"]
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -106,22 +100,34 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_04_214040) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "transactions", force: :cascade do |t|
+    t.bigint "rental_id", null: false
+    t.decimal "amount"
+    t.string "transaction_type"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["rental_id"], name: "index_transactions_on_rental_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "name"
     t.string "role"
-    t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.enum "type", enum_type: "type_user_enum"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "phone_number"
+    t.date "date_birth"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "admin_transactions", "rentals"
   add_foreign_key "documents", "rentals"
   add_foreign_key "dress_variants", "dresses"
   add_foreign_key "dress_variants", "sizes"
@@ -129,4 +135,5 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_04_214040) do
   add_foreign_key "fines", "rentals"
   add_foreign_key "rentals", "customers"
   add_foreign_key "rentals", "dress_variants"
+  add_foreign_key "transactions", "rentals"
 end

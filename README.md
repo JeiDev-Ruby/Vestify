@@ -4,7 +4,7 @@
 Su objetivo es digitalizar y optimizar todas las operaciones, desde el inventario y los contratos hasta el control de devoluciones y la generación de reportes.
 
 ---
-
+ 
 ## 🚀 Empezando
 
 Sigue estos pasos para instalar y configurar el proyecto en tu entorno local.
