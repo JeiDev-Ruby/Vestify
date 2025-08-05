@@ -1,0 +1,34 @@
+<div class="auth_container">
+    <div class="auth_content">
+        <div class="forgot_password_box_title">
+            <h2 class="auth_title"><%= $app_name %></h2>
+            <h4>Olvidaste tu contraseña</h4>
+        </div>
+
+        <div>
+            <p class="forgot_password_text">
+                Por favor, ingresa tu dirección de correo electrónico asociada a tu cuenta. Te enviaremos un enlace para restablecer tu contraseña.
+            </p>
+        </div>
+
+        <div>
+            <div class="auth_form_group">
+                <div class="auth_form_group_icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.25 4.5C1.25 4.08579 1.58579 3.75 2 3.75H22C22.4142 3.75 22.75 4.08579 22.75 4.5V19.5C22.75 19.9142 22.4142 20.25 22 20.25H2C1.58579 20.25 1.25 19.9142 1.25 19.5V4.5ZM2.75 5.25V18.75H21.25V5.25H2.75Z"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.40004 4.05004C1.64857 3.71867 2.11867 3.65152 2.45004 3.90004L12 11.0625L21.55 3.90004C21.8814 3.65152 22.3515 3.71867 22.6 4.05004C22.8486 4.38142 22.7814 4.85152 22.45 5.10004L12.45 12.6C12.1834 12.8 11.8167 12.8 11.55 12.6L1.55004 5.10004C1.21867 4.85152 1.15152 4.38142 1.40004 4.05004Z"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.25 4.5C1.25 4.08579 1.58579 3.75 2 3.75H12C12.4142 3.75 12.75 4.08579 12.75 4.5C12.75 4.91421 12.4142 5.25 12 5.25H2.75V12C2.75 12.4142 2.41421 12.75 2 12.75C1.58579 12.75 1.25 12.4142 1.25 12V4.5Z"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 4.5C11.25 4.08579 11.5858 3.75 12 3.75H22C22.4142 3.75 22.75 4.08579 22.75 4.5V12C22.75 12.4142 22.4142 12.75 22 12.75C21.5858 12.75 21.25 12.4142 21.25 12V5.25H12C11.5858 5.25 11.25 4.91421 11.25 4.5Z"/>
+                    </svg>
+                </div>
+                <input type="text" name="email" placeholder="Introduce tu dirección de correo electrónico">
+            </div>
+        </div>
+        <div>
+            <button class="auth_button auth_submit">Enviar</button>
+        </div>
+        <div class="forgot_password_footer">
+            <%= link_to "Volver a login", auth_login_path %>
+        </div>
+    </div>
+</div>

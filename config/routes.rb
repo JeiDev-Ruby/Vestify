@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   namespace :auth do
+    get "/forgot-password", to: "forgot_password#index"
     get "/login", to: "login#index"
     get "/register", to: "register#index"
   end
