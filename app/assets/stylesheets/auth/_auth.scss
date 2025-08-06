@@ -106,6 +106,48 @@
     fill: variables.$primary-color;
 }
 
+.auth_form_block{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.auth_form_block span{
+    position: absolute;
+    color: rgba(0,0,0,.5);
+    transition: all ease .4s;
+    top: 0px;
+    font-size: 1em;
+}
+
+.auth_form_block>input{
+    position: relative;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    flex: 1 1 auto;
+    padding: 3px 0;
+    z-index: 1;
+    font-size: 1em;
+    top: 0;
+}
+
+.auth_form_group:focus-within .auth_form_block span,
+.auth_form_block span.has-value{
+    top: -5px;
+    font-size: .7em;
+}
+
+.auth_form_group:focus-within .auth_form_block input,
+.auth_form_block input.has-value{
+   top: 5px;
+}
+
+.auth_form_block>input:focus {
+    outline: none;
+}
+
 .auth_forgot_password a{
     color: variables.$primary-color;
     font-size: .8em;
