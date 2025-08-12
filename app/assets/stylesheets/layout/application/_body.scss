@@ -1,0 +1,15 @@
+.layout_application_main{
+    position: relative;
+    width: 100%;
+}
+
+.layout_application_background{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.layout_application_background,
+.layout_application_background>svg{
+    width: 100%!important;
+}

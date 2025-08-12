@@ -1,0 +1,158 @@
+@use '../../variables';
+
+.layout_application_header{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 23px;
+    left: 50%;
+    height: 56px;
+    transform: translateX(-50%);
+    max-width: 806px;
+    width: 100%;
+    z-index: 50000;
+    backdrop-filter: blur(1px);
+    background-color: rgba(255,255,255,.5);
+}
+
+.layout_application_header_box{
+    width: 100%; 
+    border-radius: 18px;
+    border: 1px solid #EAEAEA;
+    display: flex;
+    padding: 12px 24px;
+    box-sizing: border-box;
+}
+
+.layout_application_header_box_logo{
+    display: flex;
+    align-items: center;
+}
+
+.layout_application_header_box_nav{
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout_application_header_box_nav>nav>ul {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.layout_application_header_box_nav>nav>ul>li{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.layout_application_header_box_nav>nav>ul>li>a,
+.layout_application_item_menu>span{
+    color: black;
+    font-size: .9em;
+    transition: all ease .4s;
+}
+
+.layout_application_header_box_nav>nav>ul>li:hover .layout_application_item_menu>svg>path{
+    transition: all ease .4s;
+}
+
+.layout_application_header_box_nav>nav>ul>li>a:hover,
+.layout_application_header_box_nav>nav>ul>li:hover .layout_application_item_menu>span{
+    color: variables.$primary-color;
+}
+
+.layout_application_header_box_nav>nav>ul>li:hover .layout_application_item_menu>svg>path{
+    fill: variables.$primary-color;
+}
+
+.layout_application_item_menu svg{
+    padding-left: 3px;
+    position: relative;
+    top: 1px;
+}
+
+.layout_application_item_menu{
+    display: flex;
+    align-items: center;
+}
+
+.layout_application_group_menu{
+    position: relative;
+}
+
+.layout_application_group_submenu{
+    position: absolute;
+    display: flex;
+    background-color: white;
+    border: 1px solid #EDEDED;
+    border-radius: 18px;
+    cursor: default;
+    overflow: hidden;
+    top: 45px;
+    left: -50px;
+    opacity: 0;
+    transform: translateY(-50px) scale(0); 
+    transform-origin: top left;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.layout_application_group_menu.visible .layout_application_group_submenu{
+    opacity: 1;
+   
+    transform: translateY(0) scale(1);
+}
+
+.layout_application_group_nav{
+    flex: 1 1 auto;
+    padding: 24px 39px 24px 24px;
+    min-width: 278px;
+}
+
+.layout_application_group_nav ul>li{
+    border-bottom: 1px solid #D6D6D6;
+}
+
+.layout_application_group_nav ul>li>a>div{
+    color: black;
+    font-size: .9em;
+    padding: 12px 0;
+    cursor: pointer;
+    transition: all ease .4s;
+}
+
+.layout_application_group_nav ul>li>a>div:hover{
+    color: variables.$primary-color;
+}
+
+.layout_application_group_nav ul>li:last-child{
+    border-bottom: none;
+}
+
+.layout_application_group_image{
+    width: 304px;
+    overflow: hidden;
+}
+
+.layout_application_group_image>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.layout_application_header_box_panel{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.layout_application_header_box_panel>div:first-child::after{
+    content: '';
+    position: absolute;
+    margin-left: 11px;
+    width: 1px;
+    height: 50%;
+    background-color: rgba(0,0,0,.1);
+}

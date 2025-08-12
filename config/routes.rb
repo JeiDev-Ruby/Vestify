@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :auth do
-    get "/reset_password/:token", to: "reset_password#index"
+    get "/reset-password/:token", to: "reset_password#index"
     get "/forgot-password", to: "forgot_password#index"
     get "/login", to: "login#index"
     get "/register", to: "register#index"

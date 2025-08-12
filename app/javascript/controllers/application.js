@@ -1,5 +1,6 @@
 import { Application } from "@hotwired/stimulus"
 import "controllers/auth"
+import "controllers/layout"
 
 const application = Application.start()
 
